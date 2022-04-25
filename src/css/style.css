@@ -7,7 +7,7 @@
 }
 @font-face{
     font-family: "Disney";
-    src: url(../src/waltograph42.otf);
+    src: url(../font/waltograph42.otf);
     font-weight: normal;
     font-style: normal;
 }
@@ -209,17 +209,19 @@ main h2{
         justify-content: center;
     }
     .disney-bg video{
-        min-width: 1510px;
+        display: none;
     }
     .disney-bg img{
         position: absolute;
-        top: 20vh;
+        top: 10vh;
     }
     .main_title{
         display: none;
     }
+    main{
+        margin-top: 26vh;
+    }
     .yt-video{
-        margin-top: 55vh;
         max-width: 95vw;
     }
     .yt-video h2{
