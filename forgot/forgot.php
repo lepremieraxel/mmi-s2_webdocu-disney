@@ -21,9 +21,15 @@
                 $insert = $bdd->prepare('INSERT INTO password_recover(token_user, token) VALUES(?,?)');
                 $insert->execute(array($token_user, $token));
 
-                $link = 'recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
+                $link = 'http://www.axel-marcial.ml/web-docu/forgot/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
 
-                echo "<a href='$link'>Lien</a>";
+                $myemail = 'contact@axel-marcial.ml';
+                $name = $data['pseudo']; 
+                $to = $email;
+                $email_subject = "Réinitialisation du mot de passe - Disney & Pixar";
+                $email_body = "Bonjour $name.<br><br>Cliquez sur ce lien pour réinitialiser votre mot de passe : $link";
+                $headers = "From: $myemail\n";
+                mail($to,$email_subject,$email_body,$headers);
             }else header('Location:index.php?forg_err=email'); die();
         }else header('Location:index.php?forg_err=email');
     }

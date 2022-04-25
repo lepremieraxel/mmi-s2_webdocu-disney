@@ -3,6 +3,8 @@
 :root{
     --bg: #041837;
     --bg-dark: #03132c;
+    --border: #020d1f;
+    --link: #355ea0;
     --white-text: #e2e9f3;
 }
 @font-face{
@@ -35,6 +37,11 @@ header a img{
     height: 50px;
     margin: 20px 30px;
 }
+header a.user i{
+    font-size: 1.2em;
+    color: var(--white-text);
+    padding-right: 60px;
+}
 nav{
     display: flex;
     flex-direction: row;
@@ -58,6 +65,9 @@ nav a i{
 }
 nav a:hover{
     border-bottom: 2px solid var(--white-text);
+}
+.user-mobile{
+    display: none;
 }
 .menuToggle{
     display: none;
@@ -188,25 +198,24 @@ main h2{
         position: fixed;
         align-self: flex-start;
     }
+    .user-mobile{
+        display: block;
+        position: fixed;
+        align-self: flex-end;
+        font-size: 2em;
+        color: var(--white-text);
+        padding: 10px;
+    }
     .logo-mobile{
         display: block;
         width: 70%;
+        margin-top: 70px;
     }
     header{
         display: none;
     }
     .disney-bg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: none;
     }
     .disney-bg video{
         display: none;
@@ -217,9 +226,6 @@ main h2{
     }
     .main_title{
         display: none;
-    }
-    main{
-        margin-top: 26vh;
     }
     .yt-video{
         max-width: 95vw;
