@@ -45,8 +45,8 @@
         </nav>
         <a href="../user/" class="user"><i class="fa-solid fa-circle-user"></i></a>
     </header>
-        <h1 id="user">Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h1>
-        <a class="user-link" href="../forgot/">Réinitialiser le mot de passe</a>
-        <a class="user-link" href="../config/unlog.php">Se déconnecter</a>
+    <h1 id="user">Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h1>
+    <a class="user-link" href="../forgot/">Réinitialiser le mot de passe</a>
+    <a class="user-link" href="../config/unlog.php">Se déconnecter</a>
 </body>
 </html>
