@@ -1,0 +1,235 @@
+*,::after,::before{box-sizing: border-box;margin: 0;padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --bg: #041837;
+    --bg-dark: #03132c;
+    --white-text: #e2e9f3;
+}
+@font-face{
+    font-family: "Disney";
+    src: url(../src/waltograph42.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg);
+    box-shadow: 0px 0px 20px #000;
+}
+header a{
+    text-decoration: none;
+}
+header a img{
+    height: 50px;
+    margin: 20px 30px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    padding-right: 100px;
+}
+nav a{
+    text-decoration: none;
+    color: var(--white-text);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: .2s;
+}
+nav a i{
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+nav a:hover{
+    border-bottom: 2px solid var(--white-text);
+}
+.menuToggle{
+    display: none;
+}
+.menuToggle input{
+    width: 35px;
+    height: 28px;
+    opacity: 0;
+    z-index: 3;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.menuToggle span{
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: var(--white-text);
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+    top: -18px;
+    left: 10px;
+    z-index: 2;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+.menuToggle span:first-child{
+    transform-origin: 0% 0%;
+}
+.menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+.menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-1px);
+    background: var(--white-text);
+}
+.menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg);
+}
+.menu{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30vh 0;
+    z-index: 1;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.menuToggle input:checked ~ ul{
+    transform: none;
+}
+.menu li{
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white-text);
+    font-size: 2em;
+}
+.logo-mobile{
+    display: none;
+}
+.disney-bg video{
+    max-width: 100vw;
+}
+.main_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+}
+.main_title h1{
+    color: var(--white-text);
+    text-shadow: 0 0 10px #000;
+    margin-bottom: 30px;
+}
+.main_title img{
+    width: 45%;
+}
+main{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px;
+}
+main h2{
+    color: var(--white-text);
+    font-family: Disney, cursive;
+    font-size: 3em;
+    font-weight: 100;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.yt-video{
+    background-color: var(--bg-dark);
+    padding: 10px 20px 20px 20px;
+}
+.yt-video img{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menuToggle{
+        display: block;
+        position: fixed;
+        align-self: flex-start;
+    }
+    .logo-mobile{
+        display: block;
+        width: 70%;
+    }
+    header{
+        display: none;
+    }
+    .disney-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .disney-bg video{
+        min-width: 1510px;
+    }
+    .disney-bg img{
+        position: absolute;
+        top: 20vh;
+    }
+    .main_title{
+        display: none;
+    }
+    .yt-video{
+        margin-top: 55vh;
+        max-width: 95vw;
+    }
+    .yt-video h2{
+        font-size: 2em;
+    }
+    .yt-video img{
+        width: 100%;
+        display: block;
+    }
+    .yt-desk{
+        display: none;
+    }
+}
