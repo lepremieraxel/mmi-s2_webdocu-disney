@@ -24,10 +24,9 @@
                 $link = 'http://www.axel-marcial.ml/web-docu/forgot/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
 
                 $myemail = 'contact@axel-marcial.ml';
-                $name = $data['pseudo']; 
                 $to = $email;
-                $email_subject = "Réinitialisation du mot de passe - Disney & Pixar";
-                $email_body = "Bonjour $name.<br><br>Cliquez sur ce lien pour réinitialiser votre mot de passe : $link";
+                $email_subject = "Reinitialisation du mot de passe - Disney & Pixar";
+                $email_body = "Cliquez sur ce lien pour réinitialiser votre mot de passe : $link";
                 $headers = "From: $myemail\n";
                 mail($to,$email_subject,$email_body,$headers);
             }else header('Location:index.php?forg_err=email'); die();

@@ -184,6 +184,15 @@ main h2{
 .yt-video img{
     display: none;
 }
+h1#user{
+    color: var(--white-text);
+    font-family: Disney, cursive;
+    font-size: 3em;
+    padding: 20px 50px;
+}
+.user-link{
+    color: var(--white-text);
+}
 @media screen and (max-width: 768px){
     html{
         overflow-x: hidden;
@@ -239,5 +248,8 @@ main h2{
     }
     .yt-desk{
         display: none;
+    }
+    h1#user{
+        text-align: center;
     }
 }
