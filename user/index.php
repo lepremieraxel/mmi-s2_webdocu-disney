@@ -34,6 +34,7 @@
             <li><a href="../about/"><i class="fa-solid fa-users"></i> à propos</a></li>
         </ul>
     </div>
+    <a class="unlog-mobile" href="../config/unlog.php"><i class="fa-solid fa-power-off"></i></a>
     <a href="../user/" class="user-mobile"><i class="fa-solid fa-circle-user"></i></a>
     <header>
         <a href="../"><img src="../src/img/disneyPixar.png" alt="disney et pixar"></a>
@@ -45,8 +46,10 @@
         </nav>
         <a href="../user/" class="user"><i class="fa-solid fa-circle-user"></i></a>
     </header>
-    <h1 id="user">Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h1>
-    <a class="user-link" href="../forgot/">Réinitialiser le mot de passe</a>
-    <a class="user-link" href="../config/unlog.php">Se déconnecter</a>
+    <a href="settings" class="settings-link"><i class="fa-solid fa-gear"></i></a>
+    <a class="unlog" href="../config/unlog.php"><i class="fa-solid fa-power-off"></i></a>
+    <div class="user-box">
+        <h1 id="user">Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h1>
+    </div>
 </body>
 </html>

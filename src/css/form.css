@@ -16,6 +16,7 @@ form.no-menu{
 .no-menu h2{
     font-family: Disney, cursive;
     font-size: 3em;
+    font-weight: 100;
     color: var(--white-text);
     text-align: center;
     margin-bottom: 30px;
@@ -127,9 +128,51 @@ form.forum{
 .h2-forum{
     font-family: Disney, cursive;
     font-size: 3em;
+    font-weight: 100;
     color: var(--white-text);
     text-align: center;
     margin-bottom: 30px;
+}
+.recover-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form.recover{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recover-line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.recover-line input{
+    color: var(--white-text);
+    border: none;
+    outline: none;
+    background-color: var(--bg);
+    width: calc(100% - 30px);
+    padding: 0 7px;
+}
+.recover-line input::placeholder{
+    color: var(--white-text);
+    font-family: Roboto, sans-serif;
+}
+.recover-line button{
+    background-color: var(--border);
+    color: var(--white-text);
+    width: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .form-alert{

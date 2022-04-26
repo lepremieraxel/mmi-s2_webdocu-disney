@@ -29,6 +29,6 @@
                 $email_body = "Cliquez sur ce lien pour réinitialiser votre mot de passe : $link";
                 $headers = "From: $myemail\n";
                 mail($to,$email_subject,$email_body,$headers);
-            }else header('Location:index.php?forg_err=email'); die();
-        }else header('Location:index.php?forg_err=email');
+            }else header('Location:../user/settings/index.php?forg_err=email'); die();
+        }else header('Location:../user/settings/index.php?forg_err=email');
     }

@@ -20,6 +20,6 @@
                 'token' => bin2hex(openssl_random_pseudo_bytes(64)
                 )
             ));
-            header('Location:index.php'); die();
+            header('Location:../forum/'); die();
         }else header('Location:index.php?forum_err=length'); die();
     }else header('Location:index.php?forum_err=empty'); die();
