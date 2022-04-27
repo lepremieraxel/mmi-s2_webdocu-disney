@@ -1,0 +1,209 @@
+.games-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.games{
+    width: 15%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 30px 0;
+}
+.games i{
+    color: var(--white-text);
+    font-size: 3em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-shadow: 0 0 10px #000;
+}
+.games h3{
+    color: var(--white-text);
+    font-weight: 200;
+    background-color: var(--border);
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+}
+
+.sondages-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sondages-page{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.sondages-page h3{
+    color: var(--white-text);
+    font-weight: 200;
+    font-size: 1.5em;
+    width: 100%;
+    background-color: var(--border);
+}
+.sondage-line{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.sondage-line label{
+    transform: translateY(-101%);
+    width: 50%;
+    height: 520px;
+    padding: 0;
+}
+.sondage-line label input{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 101.3%;
+    cursor: pointer;
+}
+.sondage-line label input:checked{
+    background-color: rgba(0, 128, 0, 0.507);
+}
+.sondage-line label p{
+    color: var(--white-text);
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--border);
+    padding-top: 3px;
+}
+.sondage-line label img{
+    width: 100%;
+    height: 500px;
+}
+.sondage-button-line{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.sondage-button-line button{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--border);
+    color: var(--white-text);
+    padding: 10px;
+    cursor: pointer;
+}
+main{
+    justify-content: center;
+}
+.form-alert{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--white-text);
+    min-height: 40px;
+    margin: 20px 0;
+}
+.form-alert h6{
+    font-size: 1.5em;
+    min-height: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+.form-alert p{
+    min-height: 40px;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0px 10px;
+}
+.form-alert a{
+    font-size: 16px;
+    color: var(--white-text);
+}
+.form-error{
+    border: 1px solid red;
+}
+.form-error h6{
+    background-color: red;
+}
+.form-error p{
+    background-color: rgba(255, 0, 0, 0.4);
+}
+.form-success{
+    border: 1px solid green;
+}
+.form-success h6{
+    background-color: green;
+}
+.form-success p{
+    background-color: rgba(0, 255, 0, 0.4);
+}
+
+#sondages i{
+    background-image: url(../img/princess.jpg);
+}
+#quizz i{
+    background-image: url(../img/mickey.jpg);
+}
+#paroles i{
+    background-image: url(../img/zootopie.jpg);
+}
+#escape i{
+    background-image: url(../img/toystory.jpg);
+}
+#princess i{
+    background-image: url(../img/princess2.jpg);
+}
+#personnages i{
+    background-image: url(../img/personnages.jpg);
+}
+#movies i{
+    background-image: url(../img/movies.jpg);
+}
+@media screen and (max-width: 1000px){
+    .games{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .sondages-page{
+        width: 90%;
+    }
+    .sondage-line{
+        flex-direction: column;
+    }
+    .sondage-line label{
+        width: 100%;
+        height: 250px;
+    }
+    .sondage-button-line{
+        width: 90%;
+    }
+}

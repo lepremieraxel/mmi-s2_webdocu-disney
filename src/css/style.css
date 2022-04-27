@@ -71,12 +71,13 @@ nav a:hover{
 }
 .menuToggle{
     display: none;
+    z-index: 4;
 }
 .menuToggle input{
     width: 35px;
     height: 28px;
     opacity: 0;
-    z-index: 3;
+    z-index: 4;
     position: relative;
     top: 10px;
     left: 10px;
@@ -91,7 +92,7 @@ nav a:hover{
     position: relative;
     top: -18px;
     left: 10px;
-    z-index: 2;
+    z-index: 3;
     transform-origin: 5px 0px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -126,7 +127,7 @@ nav a:hover{
     align-items: center;
     justify-content: space-between;
     padding: 30vh 0;
-    z-index: 1;
+    z-index: 2;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -202,6 +203,7 @@ h1#erreur_404{
 }
 .user-link{
     color: var(--white-text);
+    z-index: 4;
 }
 .settings-box{
     display: flex;
@@ -377,6 +379,7 @@ h1#erreur_404{
         font-size: 2em;
         color: var(--white-text);
         padding: 10px;
+        z-index: 4;
     }
     .logo-mobile{
         display: block;
