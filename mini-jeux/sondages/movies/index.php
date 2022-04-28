@@ -164,7 +164,7 @@
                 <h3>Quelle est ton film préféré entre :</h3>
                 <div class="sondage-line">
                     <label for="s-choice11">
-                        <input type="radio" name="S6" id="s-choice11" class="sondages-choix sondages-left" value="raya" required>
+                        <input type="radio" name="s6" id="s-choice11" class="sondages-choix sondages-left" value="raya" required>
                         <p>Raya et le dernier dragon</p>
                         <img src="../../../src/img/raya.jpg" alt="Raya et le dernier dragon">
                     </label>
