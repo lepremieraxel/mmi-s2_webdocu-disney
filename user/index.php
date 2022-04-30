@@ -36,6 +36,7 @@
     </div>
     <a class="unlog-mobile" href="../config/unlog.php"><i class="fa-solid fa-power-off"></i></a>
     <a href="../user/" class="user-mobile"><i class="fa-solid fa-circle-user"></i></a>
+    <a href="settings" class="settings-link-mobile"><i class="fa-solid fa-gear"></i></a>
     <header>
         <a href="../"><img src="../src/img/disneyPixar.png" alt="disney et pixar"></a>
         <nav>

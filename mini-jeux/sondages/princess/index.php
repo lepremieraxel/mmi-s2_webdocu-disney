@@ -59,141 +59,164 @@
                     ?>
                         <div class="form-alert form-error">
                             <h6>Erreur</h6>
-                            <p>Veuillez choisir une princesse dans chaque ligne.</p>
+                            <p>Veuillez faire un choix dans chaque cas.</p>
                         </div>
                     <?php
                     break;
 
-                    case 'update':
+                    case 'already':
                     ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos anciens choix ont été mis à jour.</p>
-                        </div>
-                    <?php
-                    break;
-
-                    case 'success':
-                    ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos choix ont bien été enregistré.</p>
+                        <div class="form-alert form-error">
+                            <h6>Erreur</h6>
+                            <p>Vous avez déjà répondu à ce sondage.</p>
                         </div>
                     <?php
                     break;
                 }
             }
         ?>
-        <form action="sondages.php" method="post" class="sondages-box">
-            <div class="sondages-page" id="page1">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice1">
-                        <input type="radio" name="s1" id="s-choice1" class="sondages-choix sondages-left" value="elsa" required>
-                        <p>Elsa</p>
-                        <img src="../../../src/img/elsa.jpg" alt="La reine des neiges">
-                    </label>
-                    <label for="s-choice2">
-                        <input type="radio" name="s1" id="s-choice2" class="sondages-choix sondages-left" value="vaiana" required>
-                        <p>Vaïana</p>
-                        <img src="../../../src/img/vaiana.jpg" alt="Vaiana">
-                    </label>
+        <div class="sondages-container">
+            <form action="sondages.php" method="post">
+                <div class="sondage-page active" id="page1">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s1-l">
+                                <img src="../../../src/img/elsa.jpg" alt="Elsa">
+                            </label>
+                            <input type="radio" name="s1" id="s1-l" value="Elsa" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s1-r">
+                                <img src="../../../src/img/vaiana.jpg" alt="Vaiana">
+                            </label>
+                            <input type="radio" name="s1" id="s1-r" value="Vaiana" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page2">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice3">
-                        <input type="radio" name="s2" id="s-choice3" class="sondages-choix sondages-left" value="mulan" required>
-                        <p>Mulan</p>
-                        <img src="../../../src/img/mulan.jpg" alt="Mulan">
-                    </label>
-                    <label for="s-choice4">
-                        <input type="radio" name="s2" id="s-choice4" class="sondages-choix sondages-left" value="pocahontas" required>
-                        <p>Pocahontas</p>
-                        <img src="../../../src/img/pocahontas.jpg" alt="Pocahontas">
-                    </label>
+                <div class="sondage-page" id="page2">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s2-l">
+                                <img src="../../../src/img/mulan.jpg" alt="Mulan">
+                            </label>
+                            <input type="radio" name="s2" id="s2-l" value="Mulan" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s2-r">
+                                <img src="../../../src/img/pocahontas.jpg" alt="Pocahontas">
+                            </label>
+                            <input type="radio" name="s2" id="s2-r" value="Pocahontas" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page3">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice5">
-                        <input type="radio" name="s3" id="s-choice5" class="sondages-choix sondages-left" value="tiana" required>
-                        <p>Tiana</p>
-                        <img src="../../../src/img/tiana.jpg" alt="Tiana">
-                    </label>
-                    <label for="s-choice6">
-                        <input type="radio" name="s3" id="s-choice6" class="sondages-choix sondages-left" value="ariel" required>
-                        <p>Ariel</p>
-                        <img src="../../../src/img/ariel.jpg" alt="Ariel">
-                    </label>
+                <div class="sondage-page" id="page3">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s3-l">
+                                <img src="../../../src/img/tiana.jpg" alt="Tiana">
+                            </label>
+                            <input type="radio" name="s3" id="s3-l" value="Tiana" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s3-r">
+                                <img src="../../../src/img/ariel.jpg" alt="Ariel">
+                            </label>
+                            <input type="radio" name="s3" id="s3-r" value="Ariel" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page4">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice7">
-                        <input type="radio" name="s4" id="s-choice7" class="sondages-choix sondages-left" value="raiponce" required>
-                        <p>Raiponce</p>
-                        <img src="../../../src/img/raiponce.jpg" alt="Raiponce">
-                    </label>
-                    <label for="s-choice8">
-                        <input type="radio" name="s4" id="s-choice8" class="sondages-choix sondages-left" value="merida" required>
-                        <p>Mérida</p>
-                        <img src="../../../src/img/merida.jpg" alt="Mérida">
-                    </label>
+                <div class="sondage-page" id="page4">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s4-l">
+                                <img src="../../../src/img/raiponce.jpg" alt="Raiponce">
+                            </label>
+                            <input type="radio" name="s4" id="s4-l" value="Raiponce" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s4-r">
+                                <img src="../../../src/img/merida.jpg" alt="Mérida">
+                            </label>
+                            <input type="radio" name="s4" id="s4-r" value="Mérida" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page5">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice9">
-                        <input type="radio" name="s5" id="s-choice9" class="sondages-choix sondages-left" value="belle" required>
-                        <p>Belle</p>
-                        <img src="../../../src/img/belle.jpg" alt="Belle">
-                    </label>
-                    <label for="s-choice10">
-                        <input type="radio" name="s5" id="s-choice10" class="sondages-choix sondages-left" value="aurore" required>
-                        <p>Aurore</p>
-                        <img src="../../../src/img/aurore.jpg" alt="Aurore">
-                    </label>
+                <div class="sondage-page" id="page5">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s5-l">
+                                <img src="../../../src/img/belle.jpg" alt="Belle">
+                            </label>
+                            <input type="radio" name="s5" id="s5-l" value="Belle" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s5-r">
+                                <img src="../../../src/img/aurore.jpg" alt="Aurore">
+                            </label>
+                            <input type="radio" name="s5" id="s5-r" value="Aurore" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page6">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice11">
-                        <input type="radio" name="s6" id="s-choice11" class="sondages-choix sondages-left" value="blanche-neige" required>
-                        <p>Blanche Neige</p>
-                        <img src="../../../src/img/blanche-neige.jpg" alt="Blanche Neige">
-                    </label>
-                    <label for="s-choice12">
-                        <input type="radio" name="s6" id="s-choice12" class="sondages-choix sondages-left" value="cendrillon" required>
-                        <p>Cendrillon</p>
-                        <img src="../../../src/img/cendrillon.jpg" alt="Cendrillon">
-                    </label>
+                <div class="sondage-page" id="page6">
+                    <h3>Quelle est ta princesse préférée entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s6-l">
+                                <img src="../../../src/img/blanche-neige.jpg" alt="Blanche Neige">
+                            </label>
+                            <input type="radio" name="s6" id="s6-l" value="Blanche Neige" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s6-r">
+                                <img src="../../../src/img/cendrillon.jpg" alt="Cendrillon">
+                            </label>
+                            <input type="radio" name="s6" id="s6-r" value="Cendrillon" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btn-sondage" type="submit">Terminer</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page7">
-                <h3>Quelle est ta princesse préférée entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice13">
-                        <input type="radio" name="s7" id="s-choice13" class="sondages-choix sondages-left" value="jasmine" required>
-                        <p>Jasmine</p>
-                        <img src="../../../src/img/jasmine.jpg" alt="Jasmine">
-                    </label>
-                    <label for="s-choice14">
-                        <input type="radio" name="s7" id="s-choice14" class="sondages-choix sondages-left" value="ariel" required>
-                        <p>Ariel</p>
-                        <img src="../../../src/img/ariel.jpg" alt="Ariel">
-                    </label>
-                </div>
-            </div>
-            <div class="sondage-button-line">
-                <button type="submit">Valider</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
+    <script src="../../../src/js/sondages.js"></script>
 </body>
 </html>

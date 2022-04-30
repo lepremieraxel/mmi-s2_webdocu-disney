@@ -59,171 +59,233 @@
                     ?>
                         <div class="form-alert form-error">
                             <h6>Erreur</h6>
-                            <p>Veuillez choisir un film dans chaque ligne.</p>
+                            <p>Veuillez faire un choix dans chaque cas.</p>
                         </div>
                     <?php
                     break;
 
-                    case 'update':
+                    case 'already':
                     ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos anciens choix ont été mis à jour.</p>
-                        </div>
-                    <?php
-                    break;
-
-                    case 'success':
-                    ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos choix ont bien été enregistré.</p>
+                        <div class="form-alert form-error">
+                            <h6>Erreur</h6>
+                            <p>Vous avez déjà répondu à ce sondage.</p>
                         </div>
                     <?php
                     break;
                 }
             }
         ?>
-        <form action="sondages.php" method="post" class="sondages-box">
-            <div class="sondages-page" id="page1">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice1">
-                        <input type="radio" name="s1" id="s-choice1" class="sondages-choix sondages-left" value="nouveaux-heros" required>
-                        <p>Les nouveaux héros</p>
-                        <img src="../../../src/img/nouveaux-heros.jpg" alt="Les nouveaux héros">
-                    </label>
-                    <label for="s-choice2">
-                        <input type="radio" name="s1" id="s-choice2" class="sondages-choix sondages-left" value="ralph" required>
-                        <p>Ralph 2.0</p>
-                        <img src="../../../src/img/ralph.jpg" alt="Ralph 2.0">
-                    </label>
+        <div class="sondages-container">
+            <form action="sondages.php" method="post">
+                <div class="sondage-page active" id="page1">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s1-l">
+                                <img src="../../../src/img/nouveaux-heros.jpg" alt="Les nouveaux héros">
+                            </label>
+                            <input type="radio" name="s1" id="s1-l" value="Les nouveaux héros" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s1-r">
+                                <img src="../../../src/img/ralph.jpg" alt="Ralph 2.0">
+                            </label>
+                            <input type="radio" name="s1" id="s1-r" value="Ralph 2.0" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page2">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice3">
-                        <input type="radio" name="s2" id="s-choice3" class="sondages-choix sondages-left" value="ratatouille" required>
-                        <p>Ratatouille</p>
-                        <img src="../../../src/img/ratatouille.jpg" alt="Ratatouille">
-                    </label>
-                    <label for="s-choice4">
-                        <input type="radio" name="s2" id="s-choice4" class="sondages-choix sondages-left" value="arlo" required>
-                        <p>Le voyage d'Arlo</p>
-                        <img src="../../../src/img/arlo.jpg" alt="Le voyage d'Arlo">
-                    </label>
+                <div class="sondage-page" id="page2">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s2-l">
+                                <img src="../../../src/img/ratatouille.jpg" alt="Ratatouille">
+                            </label>
+                            <input type="radio" name="s2" id="s2-l" value="Ratatouille" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s2-r">
+                                <img src="../../../src/img/arlo.jpg" alt="Le voyage d'Arlo">
+                            </label>
+                            <input type="radio" name="s2" id="s2-r" value="Le voyage d'Arlo" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page3">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice5">
-                        <input type="radio" name="s3" id="s-choice5" class="sondages-choix sondages-left" value="dalmatiens" required>
-                        <p>Les 101 dalmatiens</p>
-                        <img src="../../../src/img/dalmatiens.jpg" alt="Les 101 dalmatiens">
-                    </label>
-                    <label for="s-choice6">
-                        <input type="radio" name="s3" id="s-choice6" class="sondages-choix sondages-left" value="aristochats" required>
-                        <p>Les aristochats</p>
-                        <img src="../../../src/img/aristochats.jpg" alt="Les aristochats">
-                    </label>
+                <div class="sondage-page" id="page3">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s3-l">
+                                <img src="../../../src/img/dalmatiens.jpg" alt="Les 101 dalmatiens">
+                            </label>
+                            <input type="radio" name="s3" id="s3-l" value="Les 101 dalmatiens" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s3-r">
+                                <img src="../../../src/img/aristochats.jpg" alt="Les aristochats">
+                            </label>
+                            <input type="radio" name="s3" id="s3-r" value="Les aristochats" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page4">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice7">
-                        <input type="radio" name="s4" id="s-choice7" class="sondages-choix sondages-left" value="coco" required>
-                        <p>Coco</p>
-                        <img src="../../../src/img/coco.jpg" alt="Coco">
-                    </label>
-                    <label for="s-choice8">
-                        <input type="radio" name="s4" id="s-choice8" class="sondages-choix sondages-left" value="vice-versa" required>
-                        <p>Vice-versa</p>
-                        <img src="../../../src/img/vice-versa.jpg" alt="Vice-versa">
-                    </label>
+                <div class="sondage-page" id="page4">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s4-l">
+                                <img src="../../../src/img/coco.jpg" alt="Coco">
+                            </label>
+                            <input type="radio" name="s4" id="s4-l" value="Coco" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s4-r">
+                                <img src="../../../src/img/vice-versa.jpg" alt="Vice-versa">
+                            </label>
+                            <input type="radio" name="s4" id="s4-r" value="Vice-versa" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page5">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice9">
-                        <input type="radio" name="s5" id="s-choice9" class="sondages-choix sondages-left" value="peter-pan" required>
-                        <p>Peter Pan</p>
-                        <img src="../../../src/img/peter-pan.jpg" alt="Peter Pan">
-                    </label>
-                    <label for="s-choice10">
-                        <input type="radio" name="s5" id="s-choice10" class="sondages-choix sondages-left" value="clochette" required>
-                        <p>La fée Clochette</p>
-                        <img src="../../../src/img/clochette.jpg" alt="La fée Clochette">
-                    </label>
+                <div class="sondage-page" id="page5">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s5-l">
+                                <img src="../../../src/img/peter-pan.jpg" alt="Peter Pan">
+                            </label>
+                            <input type="radio" name="s5" id="s5-l" value="Peter Pan" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s5-r">
+                                <img src="../../../src/img/clochette.jpg" alt="La fée Clochette">
+                            </label>
+                            <input type="radio" name="s5" id="s5-r" value="La fée Clochette" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page6">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice11">
-                        <input type="radio" name="s6" id="s-choice11" class="sondages-choix sondages-left" value="raya" required>
-                        <p>Raya et le dernier dragon</p>
-                        <img src="../../../src/img/raya.jpg" alt="Raya et le dernier dragon">
-                    </label>
-                    <label for="s-choice12">
-                        <input type="radio" name="s6" id="s-choice12" class="sondages-choix sondages-left" value="luca" required>
-                        <p>Luca</p>
-                        <img src="../../../src/img/luca.jpg" alt="Luca">
-                    </label>
+                <div class="sondage-page" id="page6">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s6-l">
+                                <img src="../../../src/img/raya.jpg" alt="Raya et le dernier dragon">
+                            </label>
+                            <input type="radio" name="s6" id="s6-l" value="Raya et le dernier dragon" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s6-r">
+                                <img src="../../../src/img/luca.jpg" alt="Luca">
+                            </label>
+                            <input type="radio" name="s6" id="s6-r" value="Luca" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page7">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice13">
-                        <input type="radio" name="s7" id="s-choice13" class="sondages-choix sondages-left" value="rox-rouky" required>
-                        <p>ROw et Rouky</p>
-                        <img src="../../../src/img/rox-rouky.jpg" alt="Row et Rouky">
-                    </label>
-                    <label for="s-choice14">
-                        <input type="radio" name="s7" id="s-choice14" class="sondages-choix sondages-left" value="notre-dame" required>
-                        <p>Le bossu de Notre-Dame</p>
-                        <img src="../../../src/img/notre-dame.jpg" alt="Le bossu de Notre-Dame">
-                    </label>
+                <div class="sondage-page" id="page7">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s7-l">
+                                <img src="../../../src/img/rox-rouky.jpg" alt="Rox et Rouky">
+                            </label>
+                            <input type="radio" name="s7" id="s7-l" value="Rox et Rouky" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s7-r">
+                                <img src="../../../src/img/notre-dame.jpg" alt="Le bossu de Notre-Dame">
+                            </label>
+                            <input type="radio" name="s7" id="s7-r" value="Le bossu de Notre-Dame" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page8">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice15">
-                        <input type="radio" name="s8" id="s-choice15" class="sondages-choix sondages-left" value="ours" required>
-                        <p>Frère des Ours</p>
-                        <img src="../../../src/img/ours.jpg" alt="Frère des Ours">
-                    </label>
-                    <label for="s-choice16">
-                        <input type="radio" name="s8" id="s-choice16" class="sondages-choix sondages-left" value="volt" required>
-                        <p>Volt, star malgré lui</p>
-                        <img src="../../../src/img/volt.jpg" alt="Volt, star malgré lui">
-                    </label>
+                <div class="sondage-page" id="page8">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s8-l">
+                                <img src="../../../src/img/ours.jpg" alt="Frère des ours">
+                            </label>
+                            <input type="radio" name="s8" id="s8-l" value="Frère des ours" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s8-r">
+                                <img src="../../../src/img/volt.jpg" alt="Volt, star malgré lui">
+                            </label>
+                            <input type="radio" name="s8" id="s8-r" value="Volt, star malgré lui" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page9">
-                <h3>Quelle est ton film préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice17">
-                        <input type="radio" name="s9" id="s-choice17" class="sondages-choix sondages-left" value="cars" required>
-                        <p>Cars</p>
-                        <img src="../../../src/img/cars.jpg" alt="Cars">
-                    </label>
-                    <label for="s-choice18">
-                        <input type="radio" name="s9" id="s-choice18" class="sondages-choix sondages-left" value="planes" required>
-                        <p>Planes</p>
-                        <img src="../../../src/img/planes.jpg" alt="Planes">
-                    </label>
+                <div class="sondage-page" id="page9">
+                    <h3>Quelle est ton film préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s9-l">
+                                <img src="../../../src/img/cars.jpg" alt="Cars">
+                            </label>
+                            <input type="radio" name="s9" id="s9-l" value="Cars" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s9-r">
+                                <img src="../../../src/img/planes.jpg" alt="Planes">
+                            </label>
+                            <input type="radio" name="s9" id="s9-r" value="Planes" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btn-sondage" type="submit">Terminer</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondage-button-line">
-                <button type="submit">Valider</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
+    <script src="../../../src/js/sondages.js"></script>
 </body>
 </html>

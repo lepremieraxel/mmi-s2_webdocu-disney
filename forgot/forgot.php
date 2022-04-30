@@ -26,9 +26,10 @@
                 $myemail = 'contact@axel-marcial.ml';
                 $to = $email;
                 $email_subject = "Reinitialisation du mot de passe - Disney & Pixar";
-                $email_body = "Cliquez sur ce lien pour réinitialiser votre mot de passe : $link";
+                $email_body = "Cliquez sur ce lien pour reinitialiser votre mot de passe : $link";
                 $headers = "From: $myemail\n";
                 mail($to,$email_subject,$email_body,$headers);
+                header('Location:../user/settings/index.php?forg_err=success'); die();
             }else header('Location:../user/settings/index.php?forg_err=email'); die();
         }else header('Location:../user/settings/index.php?forg_err=email');
     }

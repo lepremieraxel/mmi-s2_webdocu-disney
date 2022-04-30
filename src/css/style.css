@@ -441,8 +441,8 @@ h1#erreur_404{
     }
     .settings-link-mobile{
         display: block;
-        position: relative;
-        right: 80px;
+        position: absolute;
+        right: 100px;
         align-self: flex-end;
         font-size: 2em;
         color: var(--white-text);

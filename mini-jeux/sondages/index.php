@@ -48,6 +48,24 @@
     </header>
     <main>
         <h2>Les sondages</h2>
+        <?php
+            if(isset($_GET['game_err']))
+            {
+                $err = htmlspecialchars($_GET['game_err']);
+
+                switch($err)
+                {
+                    case 'success':
+                    ?>
+                        <div class="form-alert form-success">
+                            <h6>Succès</h6>
+                            <p>Vos choix ont bien été enregistré.</p>
+                        </div>
+                    <?php
+                    break;
+                }
+            }
+        ?>
         <div class="games-box">
             <a href="princess/" id="princess" class="games">
                 <h3>Les princesses</h3>

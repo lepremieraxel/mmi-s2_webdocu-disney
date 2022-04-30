@@ -59,156 +59,210 @@
                     ?>
                         <div class="form-alert form-error">
                             <h6>Erreur</h6>
-                            <p>Veuillez choisir un personnage dans chaque ligne.</p>
+                            <p>Veuillez faire un choix dans chaque cas.</p>
                         </div>
                     <?php
                     break;
 
-                    case 'update':
+                    case 'already':
                     ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos anciens choix ont été mis à jour.</p>
-                        </div>
-                    <?php
-                    break;
-
-                    case 'success':
-                    ?>
-                        <div class="form-alert form-success">
-                            <h6>Succès</h6>
-                            <p>Vos choix ont bien été enregistré.</p>
+                        <div class="form-alert form-error">
+                            <h6>Erreur</h6>
+                            <p>Vous avez déjà répondu à ce sondage.</p>
                         </div>
                     <?php
                     break;
                 }
             }
         ?>
-        <form action="sondages.php" method="post" class="sondages-box">
-            <div class="sondages-page" id="page1">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice1">
-                        <input type="radio" name="s1" id="s-choice1" class="sondages-choix sondages-left" value="olaf" required>
-                        <p>Olaf</p>
-                        <img src="../../../src/img/olaf.jpg" alt="Olaf">
-                    </label>
-                    <label for="s-choice2">
-                        <input type="radio" name="s1" id="s-choice2" class="sondages-choix sondages-left" value="stitch" required>
-                        <p>Stitch</p>
-                        <img src="../../../src/img/stitch.jpg" alt="Stitch">
-                    </label>
+        <div class="sondages-container">
+            <form action="sondages.php" method="post">
+                <div class="sondage-page active" id="page1">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s1-l">
+                                <img src="../../../src/img/olaf.jpg" alt="Olaf">
+                            </label>
+                            <input type="radio" name="s1" id="s1-l" value="Olaf" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s1-r">
+                                <img src="../../../src/img/stitch.jpg" alt="Stitch">
+                            </label>
+                            <input type="radio" name="s1" id="s1-r" value="Stitch" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page2">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice3">
-                        <input type="radio" name="s2" id="s-choice3" class="sondages-choix sondages-left" value="mr-incredible" required>
-                        <p>Mr. Incredible</p>
-                        <img src="../../../src/img/mr-incredible.jpg" alt="Mr Incredible">
-                    </label>
-                    <label for="s-choice4">
-                        <input type="radio" name="s2" id="s-choice4" class="sondages-choix sondages-left" value="baymax" required>
-                        <p>Baymax</p>
-                        <img src="../../../src/img/baymax.jpg" alt="Baymax">
-                    </label>
+                <div class="sondage-page" id="page2">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s2-l">
+                                <img src="../../../src/img/mr-incredible.jpg" alt="Mr Incredible">
+                            </label>
+                            <input type="radio" name="s2" id="s2-l" value="Mr Incredible" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s2-r">
+                                <img src="../../../src/img/baymax.jpg" alt="Baymax">
+                            </label>
+                            <input type="radio" name="s2" id="s2-r" value="Baymax" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page3">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice5">
-                        <input type="radio" name="s3" id="s-choice5" class="sondages-choix sondages-left" value="simba" required>
-                        <p>Simba</p>
-                        <img src="../../../src/img/simba.png" alt="Simba">
-                    </label>
-                    <label for="s-choice6">
-                        <input type="radio" name="s3" id="s-choice6" class="sondages-choix sondages-left" value="wall-e" required>
-                        <p>Wall-e</p>
-                        <img src="../../../src/img/wall-e.jpg" alt="Wall-e">
-                    </label>
+                <div class="sondage-page" id="page3">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s3-l">
+                                <img src="../../../src/img/simba.png" alt="Simba">
+                            </label>
+                            <input type="radio" name="s3" id="s3-l" value="Simba" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s3-r">
+                                <img src="../../../src/img/wall-e.jpg" alt="Wall-e">
+                            </label>
+                            <input type="radio" name="s3" id="s3-r" value="Wall-e" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page4">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice7">
-                        <input type="radio" name="s4" id="s-choice7" class="sondages-choix sondages-left" value="bambi" required>
-                        <p>Bambi</p>
-                        <img src="../../../src/img/bambi.jpg" alt="Bambi">
-                    </label>
-                    <label for="s-choice8">
-                        <input type="radio" name="s4" id="s-choice8" class="sondages-choix sondages-left" value="dumbo" required>
-                        <p>Dumbo</p>
-                        <img src="../../../src/img/dumbo.jpg" alt="Dumbo">
-                    </label>
+                <div class="sondage-page" id="page4">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s4-l">
+                                <img src="../../../src/img/bambi.jpg" alt="Bambi">
+                            </label>
+                            <input type="radio" name="s4" id="s4-l" value="Bambi" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s4-r">
+                                <img src="../../../src/img/dumbo.jpg" alt="Dumbo">
+                            </label>
+                            <input type="radio" name="s4" id="s4-r" value="Dumbo" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page5">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice9">
-                        <input type="radio" name="s5" id="s-choice9" class="sondages-choix sondages-left" value="winnie" required>
-                        <p>Winnie</p>
-                        <img src="../../../src/img/winnie.jpg" alt="Winnie">
-                    </label>
-                    <label for="s-choice10">
-                        <input type="radio" name="s5" id="s-choice10" class="sondages-choix sondages-left" value="dingo" required>
-                        <p>Dingo</p>
-                        <img src="../../../src/img/dingo.jpg" alt="Dingo">
-                    </label>
+                <div class="sondage-page" id="page5">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s5-l">
+                                <img src="../../../src/img/winnie.jpg" alt="Winnie">
+                            </label>
+                            <input type="radio" name="s5" id="s5-l" value="Winnie" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s5-r">
+                                <img src="../../../src/img/dingo.jpg" alt="Dingo">
+                            </label>
+                            <input type="radio" name="s5" id="s5-r" value="Dingo" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page6">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice11">
-                        <input type="radio" name="S6" id="s-choice11" class="sondages-choix sondages-left" value="tarzan" required>
-                        <p>Tarzan</p>
-                        <img src="../../../src/img/tarzan.jpg" alt="Tarzan">
-                    </label>
-                    <label for="s-choice12">
-                        <input type="radio" name="s6" id="s-choice12" class="sondages-choix sondages-left" value="hercule" required>
-                        <p>Hercule</p>
-                        <img src="../../../src/img/hercule.jpg" alt="Hercule">
-                    </label>
+                <div class="sondage-page" id="page6">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s6-l">
+                                <img src="../../../src/img/tarzan.jpg" alt="Tarzan">
+                            </label>
+                            <input type="radio" name="s6" id="s6-l" value="Tarzan" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s6-r">
+                                <img src="../../../src/img/hercule.jpg" alt="Hercule">
+                            </label>
+                            <input type="radio" name="s6" id="s6-r" value="Hercule" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page7">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice13">
-                        <input type="radio" name="s7" id="s-choice13" class="sondages-choix sondages-left" value="buzz" required>
-                        <p>Buzz L'éclair</p>
-                        <img src="../../../src/img/buzz.jpg" alt="Buzz L'éclair">
-                    </label>
-                    <label for="s-choice14">
-                        <input type="radio" name="s7" id="s-choice14" class="sondages-choix sondages-left" value="bob" required>
-                        <p>Bob Razowski</p>
-                        <img src="../../../src/img/bob-razowski.jpg" alt="Bob Razowski">
-                    </label>
+                <div class="sondage-page" id="page7">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s7-l">
+                                <img src="../../../src/img/buzz.jpg" alt="Buzz L'éclair">
+                            </label>
+                            <input type="radio" name="s7" id="s7-l" value="Buzz L'éclair" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s7-r">
+                                <img src="../../../src/img/bob-razowski.jpg" alt="Bob Razowski">
+                            </label>
+                            <input type="radio" name="s7" id="s7-r" value="Bob Razowski" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btnNext btn-sondage" type="button">Suivant</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondages-page" id="page8">
-                <h3>Quelle est ton personnage préféré entre :</h3>
-                <div class="sondage-line">
-                    <label for="s-choice15">
-                        <input type="radio" name="s8" id="s-choice15" class="sondages-choix sondages-left" value="duchesse" required>
-                        <p>Duchesse</p>
-                        <img src="../../../src/img/duchesse.jpg" alt="Duchesse">
-                    </label>
-                    <label for="s-choice16">
-                        <input type="radio" name="s8" id="s-choice16" class="sondages-choix sondages-left" value="lady" required>
-                        <p>Lady</p>
-                        <img src="../../../src/img/lady.jpg" alt="Lady">
-                    </label>
+                <div class="sondage-page" id="page8">
+                    <h3>Quelle est ton personnage préféré entre :</h3>
+                    <div class="sondage-box">
+                        <div class="sondage-cell">
+                            <label for="s8-l">
+                                <img src="../../../src/img/duchesse.jpg" alt="Duchesse">
+                            </label>
+                            <input type="radio" name="s8" id="s8-l" value="Duchesse" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                        <div class="sondage-cell">
+                            <label for="s8-r">
+                                <img src="../../../src/img/lady.jpg" alt="Lady">
+                            </label>
+                            <input type="radio" name="s8" id="s8-r" value="Lady" required>
+                            <div class="sondage-check"></div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btnPrev btn-sondage" type="button">Précédent</button>
+                        <button class="btn-sondage" type="submit">Terminer</button>
+                    </div>
                 </div>
-            </div>
-            <div class="sondage-button-line">
-                <button type="submit">Valider</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
+    <script src="../../../src/js/sondages.js"></script>
 </body>
 </html>

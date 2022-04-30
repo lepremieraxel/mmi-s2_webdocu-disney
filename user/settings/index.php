@@ -64,7 +64,16 @@
                             ?>
                                 <div class="form-alert form-error">
                                     <h6>Erreur</h6>
-                                    <p>Aucun compte n'existe avec cette adresse email. <a href="../../register/">Inscrivez vous</a> ou <a href="../../login/">connectez vous</a>.</p>
+                                    <p>Veuillez vérifier l'email que vous avez indiqué.</p>
+                                </div>
+                            <?php
+                            break;
+
+                            case 'success':
+                            ?>
+                                <div class="form-alert form-success">
+                                    <h6>Succès</h6>
+                                    <p>Un email contenant le lien de réinitialisation viens de vous être envoyé.</p>
                                 </div>
                             <?php
                             break;

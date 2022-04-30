@@ -35,10 +35,6 @@ session_start();
                 's8' => $s8,
                 's9' => $s9,
             ));
-            header('Location:index.php?sondage_err=success'); die();
-        }else{
-            $update = $bdd->prepare('UPDATE s_films SET s1 = ?, s2 = ?, s3 = ?, s4 = ?, s5 = ?, s6 = ?, s7 = ?, s8 = ?, s9 = ? WHERE token_user = ?');
-            $update->execute(array($s1, $s2, $s3, $s4, $s5, $s6, $s7, $s8, $s9, $_SESSION['user']));
-            header('Location:index.php?sondage_err=update'); die();
-        }
+            header('Location:../index.php?game_err=success'); die();
+        }else header('Location:index.php?sondage_err=already'); die();
     }else header('Location:index.php?sondage_err=empty'); die();
