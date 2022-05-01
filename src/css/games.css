@@ -131,10 +131,57 @@ main {
 .quizz-container form{
   width: 35%;
 }
+.quizz-page{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.quizz-page h3{
+  width: 100%;
+  background-color: var(--border);
+  color: var(--white-text);
+  padding: 3px 10px;
+  font-weight: 300;
+}
 .quizz-cell{
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+}
+.quizz-cell input[type=radio]{
+  appearance: none;
+}
+.quizz-cell input[type=radio]:checked + label .quizz-check{
+  background-image: url(../img/circle-check-regular.svg);
+}
+.quizz-cell label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--white-text);
+}
+.quizz-check{
+  width: 20px;
+  height: 20px;
+  background-color: var(--white-text);
+  border-radius: 999px;
+  background-image: url(../img/circle-regular.svg);
+}
+.btn-quizz{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--border);
+  color: var(--white-text);
+  padding: 7px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 /* ALERT */
 .form-alert {
@@ -221,7 +268,10 @@ main {
     width: 100%;
     margin-bottom: 30px;
   }
-  .sondages-container form {
+  .sondages-container form{
+    width: 100%;
+  }
+  .quizz-container form{
     width: 100%;
   }
 }

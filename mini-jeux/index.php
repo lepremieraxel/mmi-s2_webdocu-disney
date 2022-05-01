@@ -25,29 +25,10 @@ $data = $req->fetch();
 </head>
 
 <body>
-  <div class="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul class="menu">
-      <li><a href="../"><i class="fa-solid fa-house"></i> Accueil</a></li>
-      <li><a href="../mini-jeux/"><i class="fa-solid fa-chess"></i> Les mini-jeux</a></li>
-      <li><a href="../forum/"><i class="fa-solid fa-message"></i> Forum</a></li>
-      <li><a href="../about/"><i class="fa-solid fa-users"></i> à propos</a></li>
-    </ul>
-  </div>
-  <a href="../user/" class="user-mobile"><i class="fa-solid fa-circle-user"></i></a>
-  <header>
-    <a href="../"><img src="../src/img/disneyPixar.png" alt="disney et pixar"></a>
-    <nav>
-      <a href="../"><i class="fa-solid fa-house"></i> Accueil</a>
-      <a href="../mini-jeux/"><i class="fa-solid fa-chess"></i> Les mini-jeux</a>
-      <a href="../forum/"><i class="fa-solid fa-message"></i> Forum</a>
-      <a href="../about/"><i class="fa-solid fa-users"></i> à propos</a>
-    </nav>
-    <a href="../user/" class="user"><i class="fa-solid fa-circle-user"></i></a>
-  </header>
+  <?php
+  include '../config/includes/menuToggle.php';
+  include '../config/includes/header.php';
+  ?>
   <main>
     <h2>Les mini-jeux</h2>
     <div class="games-box">

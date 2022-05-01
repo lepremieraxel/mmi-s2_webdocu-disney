@@ -1,455 +1,422 @@
-*,::after,::before{box-sizing: border-box;margin: 0;padding: 0;}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-:root{
-    --bg: #041837;
-    --bg-dark: #03132c;
-    --border: #020d1f;
-    --link: #355ea0;
-    --white-text: #e2e9f3;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-@font-face{
-    font-family: "Disney";
-    src: url(../font/waltograph42.otf);
-    font-weight: normal;
-    font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --bg: #041837;
+  --bg-dark: #03132c;
+  --border: #020d1f;
+  --link: #355ea0;
+  --white-text: #e2e9f3;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg);
-    font-family: Roboto, sans-serif;
+@font-face {
+  font-family: "Disney";
+  src: url(../font/waltograph42.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  font-family: Roboto, sans-serif;
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 20px #000;
+}
+header a {
+  text-decoration: none;
+}
+header a img {
+  height: 50px;
+  margin: 20px 30px;
+}
+header a.user i {
+  font-size: 1.2em;
+  color: var(--white-text);
+  padding-right: 60px;
+}
+header .logo{
+  font-family: Disney, cursive;
+  text-decoration: none;
+  color: var(--white-text);
+  font-size: 2.5em;
+  padding-left: 20px;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  padding-right: 100px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--white-text);
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+nav a i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+nav a:hover {
+  border-bottom: 2px solid var(--white-text);
+}
+.btn-user {
+  display: flex;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-user a {
+  text-decoration: none;
+  color: var(--white-text);
+  font-size: 1.7em;
+  margin-left: 10px;
+}
+.menuToggle {
+  display: none;
+  z-index: 4;
+}
+.menuToggle input {
+  width: 35px;
+  height: 28px;
+  opacity: 0;
+  z-index: 4;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.menuToggle span {
+  width: 35px;
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: var(--white-text);
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  top: -18px;
+  left: 10px;
+  z-index: 3;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+.menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+.menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-1px);
+  background: var(--white-text);
+}
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg);
+}
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30vh 0;
+  z-index: 2;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.menuToggle input:checked ~ ul {
+  transform: none;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white-text);
+  font-size: 2em;
+}
+.logo-mobile {
+  display: none;
+}
+.disney-bg video {
+  max-width: 100vw;
+}
+.main_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+}
+.main_title h1 {
+  color: var(--white-text);
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 30px;
+}
+.main_title img {
+  width: 45%;
+}
+main {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px;
+}
+main h2 {
+  color: var(--white-text);
+  font-family: Disney, cursive;
+  font-size: 3em;
+  font-weight: 100;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.yt-video {
+  background-color: var(--bg-dark);
+  padding: 10px 20px 20px 20px;
+}
+.yt-video img {
+  display: none;
+}
+.user-box h1 {
+  color: var(--white-text);
+  font-family: Disney, cursive;
+  font-weight: 100;
+  font-size: 3em;
+  padding: 20px 50px;
+}
+h1#erreur_404 {
+  font-family: Disney, cursive;
+  font-size: 3em;
+  font-weight: 100;
+  color: var(--white-text);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.settings-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.settings-box h2 {
+  font-family: Disney, cursive;
+  font-size: 3em;
+  font-weight: 100;
+  color: var(--white-text);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.setting {
+  width: 33%;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.setting h3 {
+  color: var(--white-text);
+  background-color: var(--border);
+  padding: 3px 5px;
+  width: 100%;
+}
+.settings-msg-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+}
+.settings-msg-box:last-child {
+  margin-bottom: 30px;
+}
+.message-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+}
+.message:first-child {
+  margin-bottom: 30px;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  width: 554px;
+  margin-top: 30px;
+}
+.message .pseudo-line {
+  color: var(--white-text);
+  background-color: var(--border);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pseudo-line form button {
+  color: var(--white-text);
+  background-color: var(--border);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.settings-alert {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--white-text);
+  min-height: 40px;
+  margin-top: 20px;
+  width: 90%;
+}
+.settings-alert h6 {
+  font-size: 1.5em;
+  min-height: 40px;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.settings-alert p {
+  min-height: 40px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0px 10px;
+}
+.settings-msg {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.settings-msg .pseudo-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  background-color: var(--border);
+}
+.settings-msg .pseudo-line h3 {
+  font-size: 1em;
+}
+.pseudo-line p {
+  font-size: 0.8em;
+}
+.message .message-line,
+.settings-msg .message-line {
+  color: var(--white-text);
+  padding: 7px 15px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  html {
     overflow-x: hidden;
-}
-header{
-    width: 100%;
-    height: 90px;
+  }
+  body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: var(--bg);
-    box-shadow: 0px 0px 20px #000;
-}
-header a{
-    text-decoration: none;
-}
-header a img{
-    height: 50px;
-    margin: 20px 30px;
-}
-header a.user i{
-    font-size: 1.2em;
-    color: var(--white-text);
-    padding-right: 60px;
-}
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  }
+  .menuToggle {
+    display: block;
+    position: fixed;
+    align-self: flex-start;
+  }
+  .logo-mobile {
+    display: block;
     width: 70%;
-    padding-right: 100px;
-}
-nav a{
-    text-decoration: none;
-    color: var(--white-text);
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    text-transform: uppercase;
-    border-bottom: 2px solid transparent;
-    transition: .2s;
-}
-nav a i{
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-nav a:hover{
-    border-bottom: 2px solid var(--white-text);
-}
-.user-mobile{
+    margin-top: 70px;
+  }
+  header {
     display: none;
-}
-.menuToggle{
+  }
+  .disney-bg {
     display: none;
-    z-index: 4;
-}
-.menuToggle input{
-    width: 35px;
-    height: 28px;
-    opacity: 0;
-    z-index: 4;
-    position: relative;
+  }
+  .disney-bg video {
+    display: none;
+  }
+  .disney-bg img {
+    position: absolute;
+    top: 10vh;
+  }
+  .main_title {
+    display: none;
+  }
+  .yt-video {
+    max-width: 95vw;
+  }
+  .yt-video h2 {
+    font-size: 2em;
+  }
+  .yt-video img {
+    width: 100%;
+    display: block;
+  }
+  .yt-desk {
+    display: none;
+  }
+  .message {
+    max-width: 90%;
+  }
+  .setting {
+    width: 90%;
+  }
+  .settings-link {
+    display: none;
+  }
+  .btn-user {
     top: 10px;
-    left: 10px;
-}
-.menuToggle span{
-    width: 35px;
-    height: 5px;
-    margin-bottom: 5px;
-    background-color: var(--white-text);
-    border-radius: 4px;
-    display: flex;
-    position: relative;
-    top: -18px;
-    left: 10px;
-    z-index: 3;
-    transform-origin: 5px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-}
-.menuToggle span:first-child{
-    transform-origin: 0% 0%;
-}
-.menuToggle span:nth-last-child(2){
-    transform-origin: 0% 100%;
-}
-.menuToggle input:checked ~ span{
-    opacity: 1;
-    transform: rotate(45deg) translate(-1px);
-    background: var(--white-text);
-}
-.menuToggle input:checked ~ span:nth-last-child(3){
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-.menuToggle input:checked ~ span:nth-last-child(2){
-    transform: rotate(-45deg);
-}
-.menu{
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg);
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30vh 0;
-    z-index: 2;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-.menuToggle input:checked ~ ul{
-    transform: none;
-}
-.menu li{
-    list-style: none;
-}
-.menu li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--white-text);
-    font-size: 2em;
-}
-.logo-mobile{
-    display: none;
-}
-.disney-bg video{
-    max-width: 100vw;
-}
-.main_title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-}
-.main_title h1{
-    color: var(--white-text);
-    text-shadow: 0 0 10px #000;
-    margin-bottom: 30px;
-}
-.main_title img{
-    width: 45%;
-}
-main{
-    display: flex;
-    flex-flow: row wrap;
-    padding: 40px;
-}
-main h2{
-    color: var(--white-text);
-    font-family: Disney, cursive;
-    font-size: 3em;
-    font-weight: 100;
-    padding-bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-.yt-video{
-    background-color: var(--bg-dark);
-    padding: 10px 20px 20px 20px;
-}
-.yt-video img{
-    display: none;
-}
-h1#user{
-    color: var(--white-text);
-    font-family: Disney, cursive;
-    font-weight: 100;
-    font-size: 3em;
-    padding: 20px 50px;
-}
-h1#erreur_404{
-    font-family: Disney, cursive;
-    font-size: 3em;
-    font-weight: 100;
-    color: var(--white-text);
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-.user-link{
-    color: var(--white-text);
-    z-index: 4;
-}
-.settings-box{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-.settings-box h2{
-    font-family: Disney, cursive;
-    font-size: 3em;
-    font-weight: 100;
-    color: var(--white-text);
-    text-align: center;
-    margin-bottom: 30px;
-}
-.setting{
-    width: 33%;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.setting h3{
-    color: var(--white-text);
-    background-color: var(--border);
-    padding: 3px 5px;
-    width: 100%;
-}
-.settings-msg-box{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 100%;
-}
-.settings-msg-box:last-child{
-    margin-bottom: 30px;
-}
-.unlog{
-    position: absolute;
-    top: 120px;
-    right: 50px;
-    color: var(--white-text);
-    font-size: 2em;
-}
-.unlog-mobile{
-    display: none;
-}
-.settings-link{
-    position: absolute;
-    top: 120px;
-    right: 100px;
-    color: var(--white-text);
-    font-size: 2em;
-}
-.settings-link-mobile{
-    display: none;
-}
-.message-box{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 100%;
-}
-.message:first-child{
-    margin-bottom: 30px;
-}
-.message{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    width: 554px;
-    margin-top: 30px;
-}
-.message .pseudo-line{
-    color: var(--white-text);
-    background-color: var(--border);
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.pseudo-line form button{
-    color: var(--white-text);
-    background-color: var(--border);
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.settings-alert{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 5px;
-    color: var(--white-text);
-    min-height: 40px;
-    margin-top: 20px;
-    width: 90%;
-}
-.settings-alert h6{
-    font-size: 1.5em;
-    min-height: 40px;
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-}
-.settings-alert p{
-    min-height: 40px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    padding: 0px 10px;
-}
-.settings-msg{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    margin-top: 30px;
-}
-.settings-msg .pseudo-line{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 10px;
-    background-color: var(--border);
-}
-.settings-msg .pseudo-line h3{
-    font-size: 1em;
-}
-.pseudo-line p{
-    font-size: 0.8em;
-}
-.message .message-line, .settings-msg .message-line{
-    color: var(--white-text);
-    padding: 7px 15px;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-}
-.user-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-@media screen and (max-width: 1000px){
-    html{
-        overflow-x: hidden;
-    }
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .menuToggle{
-        display: block;
-        position: fixed;
-        align-self: flex-start;
-    }
-    .user-mobile{
-        display: block;
-        position: fixed;
-        align-self: flex-end;
-        font-size: 2em;
-        color: var(--white-text);
-        padding: 10px;
-        z-index: 4;
-    }
-    .logo-mobile{
-        display: block;
-        width: 70%;
-        margin-top: 70px;
-    }
-    header{
-        display: none;
-    }
-    .disney-bg{
-        display: none;
-    }
-    .disney-bg video{
-        display: none;
-    }
-    .disney-bg img{
-        position: absolute;
-        top: 10vh;
-    }
-    .main_title{
-        display: none;
-    }
-    .yt-video{
-        max-width: 95vw;
-    }
-    .yt-video h2{
-        font-size: 2em;
-    }
-    .yt-video img{
-        width: 100%;
-        display: block;
-    }
-    .yt-desk{
-        display: none;
-    }
-    .message{
-        max-width: 90%;
-    }
-    .setting{
-        width: 90%;
-    }
-    .settings-box{
-        margin-top: -60px;
-    }
-    .unlog{
-        display: none;
-    }
-    .unlog-mobile{
-        display: block;
-        position: relative;
-        right: 50px;
-        align-self: flex-end;
-        font-size: 2em;
-        color: var(--white-text);
-        padding: 10px;
-    }
-    .settings-link{
-        display: none;
-    }
-    .settings-link-mobile{
-        display: block;
-        position: absolute;
-        right: 100px;
-        align-self: flex-end;
-        font-size: 2em;
-        color: var(--white-text);
-        padding: 10px;
-    }
-    h1#user{
-        margin-top: -50px;
-        text-align: center;
-    }
+  }
 }
