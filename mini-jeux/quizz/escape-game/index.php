@@ -25,36 +25,36 @@ $data = $req->fetch();
 </head>
 
 <body>
-<?php
+  <?php
   include '../../../config/includes/menuToggle.php';
   include '../../../config/includes/header.php';
   ?>
   <main>
     <h2>Culture Générale</h2>
     <?php
-      if (isset($_GET['quizz_err'])) {
-        $err = htmlspecialchars($_GET['quizz_err']);
+    if (isset($_GET['quizz_err'])) {
+      $err = htmlspecialchars($_GET['quizz_err']);
 
-        switch ($err) {
-          case 'empty':
-          ?>
-            <div class="form-alert form-error">
-              <h6>Erreur</h6>
-              <p>Veuillez faire un choix dans chaque cas.</p>
-            </div>
-          <?php
-            break;
-
-          case 'already':
-          ?>
-            <div class="form-alert form-error">
-              <h6>Erreur</h6>
-              <p>Vous avez déjà répondu à ce quizz.</p>
-            </div>
-          <?php
+      switch ($err) {
+        case 'empty':
+    ?>
+          <div class="form-alert form-error">
+            <h6>Erreur</h6>
+            <p>Veuillez faire un choix dans chaque cas.</p>
+          </div>
+        <?php
           break;
-        }
+
+        case 'already':
+        ?>
+          <div class="form-alert form-error">
+            <h6>Erreur</h6>
+            <p>Vous avez déjà répondu à ce quizz.</p>
+          </div>
+    <?php
+          break;
       }
+    }
     ?>
     <div class="quizz-container">
       <form action="quizz.php" method="post">

@@ -32,9 +32,19 @@ $data = $req->fetch();
     <a href="settings/"><i class="fa-solid fa-gear"></i></a>
     <a href="../config/unlog.php"><i class="fa-solid fa-power-off"></i></a>
   </div>
-  <div class="user-box">
-    <h1 id="user">Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h1>
-  </div>
+  <main>
+    <h2>Heureux de vous revoir <?php echo $data['pseudo']; ?> !</h2>
+    <div class="user-container">
+      <div class="user-box">
+        <h3>Vos scores</h3>
+        <?php include 'score.php'; ?>
+      </div>
+      <div class="user-box">
+        <h3>Vos résultats des sondages</h3>
+        <?php include 'sondage.php'; ?>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

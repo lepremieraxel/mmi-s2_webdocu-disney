@@ -31,6 +31,23 @@ $data = $req->fetch();
   ?>
   <main>
     <h2>Les mini-jeux</h2>
+    <?php
+    if (isset($_GET['game_err'])) {
+      $err = htmlspecialchars($_GET['game_err']);
+      $score = htmlspecialchars($_GET['s']);
+
+      switch ($err) {
+        case 'success':
+    ?>
+          <div class="form-alert form-success">
+            <h6>Succès</h6>
+            <p>Vos choix ont bien été enregistré. Vous avez eu un score de <?php echo $score; ?></p>
+          </div>
+    <?php
+          break;
+      }
+    }
+    ?>
     <div class="games-box">
       <a class="games" id="sondages" href="sondages/">
         <h3>Les sondages</h3>

@@ -1,5 +1,5 @@
 <header>
-  <a href="" class="logo">Disney & Pixar</a>
+  <a href="/web-docu/" class="logo">Disney & Pixar</a>
   <nav>
     <a href="/web-docu/"><i class="fa-solid fa-house"></i> Accueil</a>
     <a href="/web-docu/mini-jeux/"><i class="fa-solid fa-chess"></i> Les mini-jeux</a>

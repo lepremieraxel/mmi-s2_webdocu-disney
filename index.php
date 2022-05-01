@@ -16,7 +16,7 @@
   include 'config/includes/menuToggle.php';
   include 'config/includes/header.php';
   ?>
-  <div class="btn-user">
+  <div class="btn-user mobile-active">
     <a href="user/"><i class="fa-solid fa-circle-user"></i></a>
   </div>
   <div class="disney-bg">
