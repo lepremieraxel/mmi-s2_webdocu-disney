@@ -233,34 +233,34 @@ main {
 }
 /* BG */
 #sondages i {
-  background-image: url(../img/princess.jpg);
+  background-image: url(../img/thumbnails/sondages.jpg);
 }
 #quizz i {
-  background-image: url(../img/mickey.jpg);
+  background-image: url(../img/thumbnails/quizz.jpg);
 }
 #paroles i {
-  background-image: url(../img/zootopie.jpg);
+  background-image: url(../img/thumbnails/paroles.jpg);
 }
 #escape i {
-  background-image: url(../img/toystory.jpg);
+  background-image: url(../img/thumbnails/escape.jpg);
 }
 #princess i {
-  background-image: url(../img/princess2.jpg);
+  background-image: url(../img/thumbnails/princess.jpg);
 }
 #personnages i {
-  background-image: url(../img/personnages.jpg);
+  background-image: url(../img/thumbnails/personnages.jpg);
 }
 #movies i {
-  background-image: url(../img/movies.jpg);
+  background-image: url(../img/thumbnails/movies.jpg);
 }
 #quizz1 i {
-  background-image: url(../img/roi_lion.jpg);
+  background-image: url(../img/thumbnails/quizz1.jpg);
 }
 #quizz2 i {
-  background-image: url(../img/maison-de-mickey.jpg);
+  background-image: url(../img/thumbnails/quizz2.jpg);
 }
 #quizz3 i {
-  background-image: url(../img/aladdin.webp);
+  background-image: url(../img/thumbnails/quizz3.webp);
 }
 /* MOBILE */
 @media screen and (max-width: 1000px) {

@@ -63,14 +63,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s1-l">
-                <img src="../../../src/img/elsa.jpg" alt="Elsa">
+                <img src="../../../src/img/princesses/elsa.png" alt="Elsa">
               </label>
               <input type="radio" name="s1" id="s1-l" value="Elsa" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s1-r">
-                <img src="../../../src/img/vaiana.jpg" alt="Vaiana">
+                <img src="../../../src/img/princesses/vaiana.png" alt="Vaiana">
               </label>
               <input type="radio" name="s1" id="s1-r" value="Vaiana" required>
               <div class="sondage-check"></div>
@@ -85,14 +85,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s2-l">
-                <img src="../../../src/img/mulan.jpg" alt="Mulan">
+                <img src="../../../src/img/princesses/mulan.png" alt="Mulan">
               </label>
               <input type="radio" name="s2" id="s2-l" value="Mulan" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s2-r">
-                <img src="../../../src/img/pocahontas.jpg" alt="Pocahontas">
+                <img src="../../../src/img/princesses/pocahontas.png" alt="Pocahontas">
               </label>
               <input type="radio" name="s2" id="s2-r" value="Pocahontas" required>
               <div class="sondage-check"></div>
@@ -108,14 +108,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s3-l">
-                <img src="../../../src/img/tiana.jpg" alt="Tiana">
+                <img src="../../../src/img/princesses/tiana.png" alt="Tiana">
               </label>
               <input type="radio" name="s3" id="s3-l" value="Tiana" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s3-r">
-                <img src="../../../src/img/ariel.jpg" alt="Ariel">
+                <img src="../../../src/img/princesses/ariel.png" alt="Ariel">
               </label>
               <input type="radio" name="s3" id="s3-r" value="Ariel" required>
               <div class="sondage-check"></div>
@@ -131,14 +131,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s4-l">
-                <img src="../../../src/img/raiponce.jpg" alt="Raiponce">
+                <img src="../../../src/img/princesses/raiponce.png" alt="Raiponce">
               </label>
               <input type="radio" name="s4" id="s4-l" value="Raiponce" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s4-r">
-                <img src="../../../src/img/merida.jpg" alt="Mérida">
+                <img src="../../../src/img/princesses/merida.png" alt="Mérida">
               </label>
               <input type="radio" name="s4" id="s4-r" value="Mérida" required>
               <div class="sondage-check"></div>
@@ -154,14 +154,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s5-l">
-                <img src="../../../src/img/belle.jpg" alt="Belle">
+                <img src="../../../src/img/princesses/belle.png" alt="Belle">
               </label>
               <input type="radio" name="s5" id="s5-l" value="Belle" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s5-r">
-                <img src="../../../src/img/aurore.jpg" alt="Aurore">
+                <img src="../../../src/img/princesses/aurore.png" alt="Aurore">
               </label>
               <input type="radio" name="s5" id="s5-r" value="Aurore" required>
               <div class="sondage-check"></div>
@@ -177,14 +177,14 @@ $data = $req->fetch();
           <div class="sondage-box">
             <div class="sondage-cell">
               <label for="s6-l">
-                <img src="../../../src/img/blanche-neige.jpg" alt="Blanche Neige">
+                <img src="../../../src/img/princesses/blanche-neige.png" alt="Blanche Neige">
               </label>
               <input type="radio" name="s6" id="s6-l" value="Blanche Neige" required>
               <div class="sondage-check"></div>
             </div>
             <div class="sondage-cell">
               <label for="s6-r">
-                <img src="../../../src/img/cendrillon.jpg" alt="Cendrillon">
+                <img src="../../../src/img/princesses/cendrillon.png" alt="Cendrillon">
               </label>
               <input type="radio" name="s6" id="s6-r" value="Cendrillon" required>
               <div class="sondage-check"></div>
