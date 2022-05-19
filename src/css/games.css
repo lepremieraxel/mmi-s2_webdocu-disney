@@ -220,7 +220,7 @@ main {
   background-color: red;
 }
 .form-error p {
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.5);
 }
 .form-success {
   border: 1px solid green;

@@ -46,11 +46,11 @@ require_once '../../config/config.php';
         <i class="fa-solid fa-crown"></i>
       </a>
       <a class="games" id="quizz2" href="culture-generale/">
-        <h3>Culture générale</h3>
+        <h3>Culture Disney</h3>
         <i class="fa-solid fa-brain"></i>
       </a>
       <a class="games" id="quizz3" href="escape-game/">
-        <h3>Escape game</h3>
+        <h3>Avez-vous bien suivi l'escape game ?</h3>
         <i class="fa-solid fa-person-running"></i>
       </a>
     </div>

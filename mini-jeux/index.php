@@ -41,7 +41,23 @@ $data = $req->fetch();
     ?>
           <div class="form-alert form-success">
             <h6>Succès</h6>
-            <p>Vos choix ont bien été enregistré. Vous avez eu un score de <?php echo $score; ?></p>
+            <p>Vos choix ont bien été enregistré. Vous avez eu un score de <?php echo $score; ?> .</p>
+          </div>
+    <?php
+          break;
+        case 'escape':
+          ?>
+          <div class="form-alert form-success">
+            <h6>Succès</h6>
+            <p>Vous avez réussi l'escape game en <?php echo $score; ?> secondes.</p>
+          </div>
+    <?php
+          break;
+        case 'already':
+    ?>
+          <div class="form-alert form-error">
+            <h6>Erreur</h6>
+            <p>Vous avez déjà fait ce mini-jeu.</p>
           </div>
     <?php
           break;

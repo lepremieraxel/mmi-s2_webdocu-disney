@@ -21,7 +21,7 @@ $data = $req->fetch();
   <link rel="stylesheet" href="../../../src/css/style.css">
   <link rel="stylesheet" href="../../../src/css/games.css">
   <link rel="shortcut icon" href="../../../src/img/logo_marvel_on-web_site.ico" type="image/x-icon">
-  <title>Culture Générale - Disney & Pixar</title>
+  <title>Avez-vous bien suivi l'escape game ? - Disney & Pixar</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@ $data = $req->fetch();
   include '../../../config/includes/header.php';
   ?>
   <main>
-    <h2>Culture Générale</h2>
+    <h2>Avez-vous bien suivi l'escape game ?</h2>
     <?php
     if (isset($_GET['quizz_err'])) {
       $err = htmlspecialchars($_GET['quizz_err']);

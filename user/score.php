@@ -56,3 +56,17 @@ foreach ($bdd->query('SELECT * FROM q_lyrics') as $score) {
       </div>";
   }
 }
+// Escape Game
+foreach ($bdd->query('SELECT * FROM escape_game') as $score) {
+  if ($score['token_user'] == $_SESSION['user']) {
+    $date = date_create($score['date']);
+    echo "
+        <div class='user-cell'>
+        <div class='title-line'>
+          <h3>Escape Game</h3>
+          <p>le " . date_format($date, 'd M Y') . "</p>
+        </div>
+        <p class='result-line'>Vous avez terminé l'escape game en &ensp;<span>" . htmlspecialchars_decode($score['temps']) . " secondes.</span></p>
+      </div>";
+  }
+}
