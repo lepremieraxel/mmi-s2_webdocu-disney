@@ -34,6 +34,7 @@
       <a href="https://youtu.be/uMP-tES9ngo"><img src="src/img/thumbnail-yt.png"></a>
     </div>
   </main>
+  <?php include 'config/includes/footer.php';?>
 </body>
 
 </html>

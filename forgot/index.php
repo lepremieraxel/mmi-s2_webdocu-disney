@@ -41,6 +41,7 @@
       <button type="submit">Envoyer</button>
     </form>
   </div>
+  <?php include '../config/includes/footer.php';?>
 </body>
 
 </html>

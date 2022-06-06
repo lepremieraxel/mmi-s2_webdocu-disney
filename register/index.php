@@ -93,6 +93,7 @@
       <a href="../login/">Vous avez déjà un compte ? Connexion.</a>
     </div>
   </div>
+  <?php include '../config/includes/footer.php';?>
 </body>
 
 </html>

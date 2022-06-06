@@ -29,7 +29,7 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
               'ip' => $ip,
               'token' => bin2hex(openssl_random_pseudo_bytes(64))
             ));
-            header('Location:index.php?reg_err=success');
+            header('Location:../login/index.php?reg_err=success&t=user');
           } else header('Location:index.php?reg_err=password');
         } else header('Location:index.php?reg_err=email');
       } else header('Location:index.php?reg_err=email_length');

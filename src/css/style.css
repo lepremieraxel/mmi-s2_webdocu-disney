@@ -22,6 +22,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   background-color: var(--bg);
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
@@ -412,6 +413,71 @@ main h2 {
 .mobile-active{
   display: none;
 }
+.about-bloc{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.about-container h3{
+  display: flex;
+  width: 100%;
+  background-color: var(--border);
+  color: var(--white-text);
+  font-weight: 300;
+  padding: 3px 5px;
+}
+.about-container h4{
+  color: var(--white-text);
+  font-weight: 300;
+  padding: 5px;
+  text-decoration: underline;
+}
+.about-container p{
+  padding: 10px;
+  color: var(--white-text);
+  line-height: 1.5;
+}
+.about-container p a{
+  color: var(--link);
+  padding-left: 20px;
+}
+.about-container p img{
+  max-height: 300px;
+  height: 300px;
+  max-width: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--border);
+}
+footer p{
+  text-transform: uppercase;
+  color: var(--white-text);
+}
+footer p a{
+  color: var(--white-text);
+  text-decoration: none;
+}
+footer p a:hover{
+  color: var(--link);
+  text-decoration: underline;
+}
 @media screen and (max-width: 1000px) {
   html {
     overflow-x: hidden;
@@ -477,5 +543,10 @@ main h2 {
   }
   .mobile-active{
     display: initial;
+  }
+  .about-container{
+    width: 95%;
+    max-width: none;
+    max-height: none;
   }
 }

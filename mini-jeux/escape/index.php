@@ -2,7 +2,7 @@
 session_start();
 require_once '../../config/config.php';
 if (!isset($_SESSION['user'])) {
-  header('Location:../../login/');
+  header('Location:../../login/index.php?t=escape');
   die();
 }
 $req = $bdd->prepare('SELECT * FROM users WHERE token = ?');
@@ -80,6 +80,7 @@ $data = $req->fetch();
     </div>
   </main>
   <script src="../../src/js/escape.js"></script>
+  <?php include '../../config/includes/footer.php';?>
 </body>
 
 </html>

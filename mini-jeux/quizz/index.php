@@ -1,5 +1,13 @@
 <?php
+session_start();
 require_once '../../config/config.php';
+if (!isset($_SESSION['user'])) {
+  header('Location:../../login/index.php?t=quizz');
+  die();
+}
+$req = $bdd->prepare('SELECT * FROM users WHERE token = ?');
+$req->execute(array($_SESSION['user']));
+$data = $req->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +63,7 @@ require_once '../../config/config.php';
       </a>
     </div>
   </main>
+  <?php include '../../config/includes/footer.php';?>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 session_start();
 require_once '../../../config/config.php';
 if (!isset($_SESSION['user'])) {
-  header('Location:../../../login/');
+  header('Location:../../../login/index.php?t=quizz/escape-game');
   die();
 }
 $req = $bdd->prepare('SELECT * FROM users WHERE token = ?');
@@ -244,6 +244,7 @@ $data = $req->fetch();
       </form>
     </div>
   </main>
+  <?php include '../../../config/includes/footer.php';?>
 </body>
 
 </html>

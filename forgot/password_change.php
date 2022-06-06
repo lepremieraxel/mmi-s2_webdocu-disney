@@ -74,6 +74,7 @@
       <a href="../register/">Inscription</a>
     </div>
   </div>
+  <?php include '../config/includes/footer.php';?>
 </body>
 
 </html>

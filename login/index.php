@@ -51,9 +51,27 @@
           break;
       }
     }
+    if (isset($_GET['reg_err'])) {
+      $err = htmlspecialchars($_GET['reg_err']);
+
+      switch ($err) {
+        case 'success':
+    ?>
+          <div class="form-alert form-success">
+            <h6>Succès</h6>
+            <p>Inscription réussie ! Maintenant connectez vous.</p>
+          </div>
+        <?php
+          break;
+        }
+    }
+    if (isset($_GET['t'])){
+      $url = $_GET['t'];
+    }
     ?>
     <form action="login.php" method="post" class="no-menu">
       <h2>Connexion</h2>
+      <input type="hidden" name="url" value="<?php echo $url;?>">
       <input class="login" type="email" name="email" placeholder="Email" required="required" autocomplete="off">
       <input class="login" type="password" name="password" placeholder="Mot de passe" required="required" autocomplete="off">
       <button type="submit">Connexion</button>
@@ -63,6 +81,7 @@
       <a href="../forgot/">Mot de passe oublié ?</a>
     </div>
   </div>
+  <?php include '../config/includes/footer.php';?>
 </body>
 
 </html>

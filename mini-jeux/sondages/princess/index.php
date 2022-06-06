@@ -2,7 +2,7 @@
 session_start();
 require_once '../../../config/config.php';
 if (!isset($_SESSION['user'])) {
-  header('Location:../../../login/');
+  header('Location:../../../login/index.php?t=sondages/princess');
   die();
 }
 $req = $bdd->prepare('SELECT * FROM users WHERE token = ?');
@@ -199,6 +199,7 @@ $data = $req->fetch();
     </div>
   </main>
   <script src="../../../src/js/sondages.js"></script>
+  <?php include '../../../config/includes/footer.php';?>
 </body>
 
 </html>
