@@ -22,6 +22,13 @@ $data = $req->fetch();
   <link rel="stylesheet" href="../../../src/css/games.css">
   <link rel="shortcut icon" href="../../../src/img/logo_marvel_on-web_site.ico" type="image/x-icon">
   <title>Les films - Disney & Pixar</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQYN3X35L5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DQYN3X35L5');
+  </script>
 </head>
 
 <body>
